@@ -8,8 +8,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include(FetchContent)
 
 add_subdirectory(external/raylib-cpp)
+add_subdirectory(external/imgui-docking)
 
 set(SOURCES src/main.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 20)
-target_link_libraries(${PROJECT_NAME} PUBLIC raylib raylib_cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC raylib raylib_cpp imgui rlimgui)

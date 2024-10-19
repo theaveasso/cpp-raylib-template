@@ -1,4 +1,4 @@
-project(raylib_cpp_example)
+project(raylib_cpp)
 
 # raylib
 find_package(raylib QUIET)
@@ -35,5 +35,3 @@ if (${PLATFORM} STREQUAL "Web")
     # Required linker flags for using Raylib with Emscripten
     target_link_options(${PROJECT_NAME} PRIVATE -sEXPORTED_FUNCTIONS=['_main','_malloc'] -sEXPORTED_RUNTIME_METHODS=ccall -sUSE_GLFW=3)
 endif()
-
-# That's it! You should have an example executable that you can run. Have fun!
